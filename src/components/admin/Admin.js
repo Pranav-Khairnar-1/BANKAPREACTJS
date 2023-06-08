@@ -16,7 +16,7 @@ import Account from './Account'
 const Admin = () => {
     const username = useParams().username;
     const navigate = new useNavigate();
-    const [activeChild, setActiveChild] = useState("");
+    const [activeChild, setActiveChild] = useState("child1");
 
     const handleClick = (child) => {
         setActiveChild(child);
@@ -51,7 +51,7 @@ const Admin = () => {
                 </div>
             </nav>
             <div>
-                {(activeChild === "child1") && <Customer />}
+                {(activeChild === "child1") && <Customer username={username}/>}
                 {(activeChild === "child2") && <Bank />}
                 {(activeChild === "child3") && <Account />}
 
