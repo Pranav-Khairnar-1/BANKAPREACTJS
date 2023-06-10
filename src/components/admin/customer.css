@@ -1,0 +1,10 @@
+.checkbox-css{
+    width: 16px;
+    height: 16px;
+    margin-right: 2%;
+}
+
+.close{
+    cursor: pointer;
+    margin-bottom: 2%
+}

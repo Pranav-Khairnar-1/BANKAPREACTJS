@@ -33,9 +33,9 @@ const Paginate = ({ totalCount, limit, setLimit, offset, setOffset }) => {
   }
 
   useEffect(() => {
-    console.log("values inside pagination------->",limit,offset)
+    console.log("values inside pagination------->", limit, offset)
     processPagination()
-  }, [limit, offset])
+  }, [limit, offset, totalCount])
 
   return (
     <>
