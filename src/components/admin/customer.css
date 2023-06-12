@@ -8,3 +8,10 @@
     cursor: pointer;
     margin-bottom: 2%
 }
+
+.container-fix{
+  margin-left: 12.2%;
+  margin-right:5% ;
+  margin-bottom: 3%;
+  width: 60%;
+}

@@ -30,6 +30,11 @@ const Admin = () => {
         console.log("hurrrrayyyyyyyy", flag)
     }, [])
 
+    const handleLogOut = (child) => {
+        localStorage.setItem('authorization', 'garbage value')
+        navigate("/")
+    };
+
 
     return (
         <>
@@ -44,16 +49,16 @@ const Admin = () => {
                             <button className="nav-link active" onClick={() => handleClick('child1')} aria-current="page" >Customer</button>
                             <button className="nav-link active" onClick={() => handleClick('child2')} aria-current="page" >Bank</button>
                             <button className="nav-link active" onClick={() => handleClick('child3')} aria-current="page" >Account</button>
-
+                            <button className="nav-link active" onClick={() => handleLogOut()} aria-current="page" >Logout</button>
                         </div>
                         <div className='put-right text-nowrap'>Welcome, {username}</div>
                     </div>
                 </div>
             </nav>
             <div>
-                {(activeChild === "child1") && <Customer username={username}/>}
-                {(activeChild === "child2") && <Bank />}
-                {(activeChild === "child3") && <Account />}
+                {(activeChild === "child1") && <Customer username={username} />}
+                {(activeChild === "child2") && <Bank username={username} />}
+                {(activeChild === "child3") && <Account username={username} />}
 
 
                 {/* <Routes>

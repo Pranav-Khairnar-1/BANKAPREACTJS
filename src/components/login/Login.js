@@ -17,10 +17,12 @@ const Login = () => {
       console.log("Post request response---->", res.data);
       if (res.data.isAdmin) {
         localStorage.setItem('authorization', res.data.token);
+        localStorage.setItem('ID', res.data.id);
         navigate(`/admin/${res.data.username}`)
         console.log("is Admin is trueeee");
       } else {
         localStorage.setItem('authorization', res.data.token);
+        localStorage.setItem('ID', res.data.id);
         navigate(`/customer/${res.data.username}`)
         console.log("is admin is falsee")
       }

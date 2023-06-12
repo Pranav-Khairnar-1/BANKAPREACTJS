@@ -16,7 +16,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 'Auto',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -170,7 +170,7 @@ const Customer = ({ username }) => {
           let flag = await createNewCustomer(data)
           handleClose()
           console.log(flag);
-          alert(flag?.data?.message);
+          alert("Customer added successfully!");
           testFunction();
         } catch (error) {
           console.log(error);
